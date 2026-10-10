@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-cream text-ink antialiased; }
+  h1, h2, h3 { @apply font-display tracking-tight; }
+  :focus-visible { @apply outline-none ring-2 ring-brand-400 ring-offset-2 ring-offset-cream; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-brand-500 text-white hover:bg-brand-600 active:bg-brand-700; }
+  .btn-dark { @apply btn bg-ink text-white hover:bg-black; }
+  .btn-outline { @apply btn border border-ink/15 bg-white text-ink hover:border-ink/40; }
+  .btn-ghost { @apply btn px-3 text-ink-soft hover:bg-black/5 hover:text-ink; }
+  .btn-sm { @apply px-4 py-2 text-xs; }
+  .input { @apply w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-muted focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-100; }
+  .label { @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink-soft; }
+  .card { @apply rounded-2xl border border-line bg-white shadow-card; }
+  .chip { @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-[11px] font-semibold; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-500; }
+}
+
+/* Rich text imported from the original product pages */
+.prose-r23 { @apply text-[15px] leading-7 text-ink-soft; }
+.prose-r23 p { @apply my-3; }
+.prose-r23 strong, .prose-r23 b { @apply font-semibold text-ink; }
+.prose-r23 h1, .prose-r23 h2, .prose-r23 h3, .prose-r23 h4 { @apply mb-2 mt-6 font-sans text-base font-semibold text-ink; }
+.prose-r23 ul { @apply my-3 list-disc space-y-1 pl-5; }
+.prose-r23 ol { @apply my-3 list-decimal space-y-1 pl-5; }
+.prose-r23 a { @apply text-brand-600 underline underline-offset-2; }
+.prose-r23 img { @apply my-4 h-auto max-w-full rounded-xl; }
+.prose-r23 table { @apply my-4 w-full text-sm; }
+.prose-r23 td, .prose-r23 th { @apply border border-line px-3 py-2 text-left; }
+.prose-r23 u { @apply no-underline; }
+.prose-r23 iframe { @apply aspect-video h-auto w-full rounded-xl; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
